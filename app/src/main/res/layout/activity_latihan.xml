@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="id.developer.lynx.damapps.main.ActivityLatihan">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/text_act_latihan_angka"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPurpleLight"
+            android:padding="@dimen/act_main_padding_text"
+            android:layout_marginBottom="@dimen/act_main_margin_text"
+            android:text="Angka"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/text_act_latihan_huruf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorOrangeLight"
+            android:padding="@dimen/act_main_padding_text"
+            android:layout_marginBottom="@dimen/act_main_margin_text"
+            android:text="Huruf"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/text_act_latihan_kata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBlueSeaLight"
+            android:padding="@dimen/act_main_padding_text"
+            android:layout_marginBottom="@dimen/act_main_margin_text"
+            android:text="Kata"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/text_act_latihan_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrayLight"
+            android:padding="@dimen/act_main_padding_text"
+            android:text="Kembali"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"/>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
