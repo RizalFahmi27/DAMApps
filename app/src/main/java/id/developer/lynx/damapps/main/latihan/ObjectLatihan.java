@@ -1,7 +1,10 @@
 package id.developer.lynx.damapps.main.latihan;
 
 /**
- * Created by Bend on 11/9/2016.
+ * @author bend
+ * @version 1.0
+ * @date 11/6/2016
+ * Object untuk list data latihan
  */
 
 public class ObjectLatihan {

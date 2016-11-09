@@ -5,4 +5,7 @@
     <string name="title_activity_tantangan">ActivityTantangan</string>
     <string name="title_activity_about">ActivityAbout</string>
     <string name="title_activity_show_latihan">ActivityShowLatihan</string>
+    <string name="title_activity_show_tantangan">ActivityShowTantangan</string>
+    <string name="title_activity_history_latihan">ActivityHistoryLatihan</string>
+    <string name="title_activity_history_tantangan">ActivityHistoryTantangan</string>
 </resources>

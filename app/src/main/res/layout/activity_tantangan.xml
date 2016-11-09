@@ -12,13 +12,45 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="?attr/colorPrimary"-->
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
     </android.support.design.widget.AppBarLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:padding="20dp">
 
+        <TextView
+            android:id="@+id/text_act_tantangan_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPurpleLight"
+            android:padding="@dimen/act_main_padding_text"
+            android:layout_marginBottom="@dimen/act_main_margin_text"
+            android:text="Mulai"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/text_act_tantangan_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorOrangeLight"
+            android:padding="@dimen/act_main_padding_text"
+            android:layout_marginBottom="@dimen/act_main_margin_text"
+            android:text="History"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"/>
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

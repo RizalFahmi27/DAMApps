@@ -37,6 +37,19 @@
         <activity
             android:name=".main.latihan.ActivityShowLatihan"
             android:label="@string/title_activity_show_latihan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.tantangan.mulai.ActivityShowTantangan"
+            android:label="@string/title_activity_show_tantangan"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.tantangan.result.ActivityResultTantangan"
+            android:label="@string/title_activity_history_latihan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".main.tantangan.history.ActivityHistoryTantangan"
+            android:label="@string/title_activity_history_tantangan"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
