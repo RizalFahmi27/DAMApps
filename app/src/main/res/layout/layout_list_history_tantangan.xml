@@ -4,7 +4,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="10dp">
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/text_lay_list_history_id"
@@ -14,24 +14,26 @@
         android:text="1"
         android:textStyle="bold"
         android:textSize="20sp"/>
-
     <TextView
         android:id="@+id/text_lay_list_history_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="A"
+        android:text="10 November 2016"
         android:textStyle="bold"
         android:textSize="20sp"/>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
     <android.support.v7.widget.CardView
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:cardCornerRadius="3dp"
-        app:cardBackgroundColor="#ff5c9f">
+        app:cardBackgroundColor="#7aea78"
+        android:id="@+id/cardViewScoreHistory"
+        android:layout_centerInParent="true">
     <TextView
         android:id="@+id/text_lay_list_history_jawaban_benar"
         android:layout_width="match_parent"
@@ -44,5 +46,5 @@
         android:textStyle="bold"
         android:textSize="20sp"/>
     </android.support.v7.widget.CardView>
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

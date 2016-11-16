@@ -52,7 +52,7 @@ public class SystemListAdapterResult extends BaseAdapter {
         String jawaban_benar = listSoal.get(position).jawaban_benar;
         String jawaban_user = listSoal.get(position).jawaban_user;
 
-        ((TextView)convertView.findViewById(R.id.text_lay_list_result_id)).setText("" +listSoal.get(position).id);
+        ((TextView)convertView.findViewById(R.id.text_lay_list_result_id)).setText("" +(position+1));
         ((TextView)convertView.findViewById(R.id.text_lay_list_result_jawaban_benar)).setText(jawaban_benar);
         ((TextView)convertView.findViewById(R.id.text_lay_list_result_jawaban_user)).setText(jawaban_user);
 

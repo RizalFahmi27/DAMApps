@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="id.developer.lynx.damapps.main.tantangan.history.ActivityResultTantangan">
+    tools:context="id.developer.lynx.damapps.main.tantangan.history.ActivityHistoryTantangan">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -19,10 +19,49 @@
             <!--android:background="?attr/colorPrimary"-->
             <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
     </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="No"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Jawan Anda"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Jawaban Benar"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"/>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/list_act_result_tantangan"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:padding="10dp"/>
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
