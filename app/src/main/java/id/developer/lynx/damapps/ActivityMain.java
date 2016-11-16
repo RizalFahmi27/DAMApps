@@ -21,6 +21,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import id.developer.lynx.damapps.main.ActivityAbout;
@@ -30,7 +31,8 @@ import id.developer.lynx.damapps.main.ActivityTantangan;
 public class ActivityMain extends AppCompatActivity {
 
     /** Variable untuk komponen yang ada di layout Main */
-    TextView textLatihan, textTantangan, textAbout, textKeluar;
+    TextView textLatihan, textTantangan;
+    ImageView imageAbout, imageExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +51,8 @@ public class ActivityMain extends AppCompatActivity {
         /** Inisialisasi komponen di layout ke dalam variable */
         textLatihan = (TextView)findViewById(R.id.text_act_main_latihan);
         textTantangan = (TextView)findViewById(R.id.text_act_main_tantangan);
-        textAbout = (TextView)findViewById(R.id.text_act_main_about);
-        textKeluar = (TextView)findViewById(R.id.text_act_main_keluar);
+        imageAbout = (ImageView)findViewById(R.id.image_act_main_about);
+        imageExit = (ImageView)findViewById(R.id.image_act_main_exit);
 
         /**
          * Ketika button Latihan, Tantangan, dan About diclick akan mengarah ke satu perintah yang sama
@@ -60,21 +62,21 @@ public class ActivityMain extends AppCompatActivity {
          */
         textButtonClicked(textLatihan, ActivityLatihan.class);
         textButtonClicked(textTantangan, ActivityTantangan.class);
-        textButtonClicked(textAbout, ActivityAbout.class);
+        textButtonClicked(imageAbout, ActivityAbout.class);
 
         /** Ketika button Keluar diclick maka akan menghentikan aplikasi */
-        textKeluar.setOnClickListener(
+        imageExit.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        finish();
+                        onBackPressed();
                     }
                 }
         );
     }
 
     /** Method untuk menginisialisasi perintah yang akan dilakukan ketika salah satu button diclick */
-    private void textButtonClicked(TextView text, final Class goTo){
+    private void textButtonClicked(View text, final Class goTo){
         text.setOnClickListener(
                 new View.OnClickListener() {
                     @Override

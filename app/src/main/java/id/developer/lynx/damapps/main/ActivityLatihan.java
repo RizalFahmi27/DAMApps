@@ -19,6 +19,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import id.developer.lynx.damapps.ActivityMain;
@@ -29,7 +30,8 @@ import id.developer.lynx.damapps.main.latihan.ActivityShowLatihan;
 public class ActivityLatihan extends AppCompatActivity {
 
     /** Variable untuk komponen yang ada di layout Latihan */
-    TextView textLatihanAngka, textLatihanHuruf, textLatihanKata, textKembali;
+    TextView textLatihanAngka, textLatihanHuruf, textLatihanKata;
+    ImageView imageKembali;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +51,7 @@ public class ActivityLatihan extends AppCompatActivity {
         textLatihanAngka = (TextView)findViewById(R.id.text_act_latihan_angka);
         textLatihanHuruf = (TextView)findViewById(R.id.text_act_latihan_huruf);
         textLatihanKata = (TextView)findViewById(R.id.text_act_latihan_kata);
-        textKembali = (TextView)findViewById(R.id.text_act_latihan_kembali);
+        imageKembali = (ImageView)findViewById(R.id.image_act_latihan_kembali);
 
         /**
          * Ketika button Latihan Angka, Latihan Huruf, dan Latihan Kata diclick akan mengarah ke satu perintah yang sama
@@ -61,8 +63,8 @@ public class ActivityLatihan extends AppCompatActivity {
         textButtonClicked(textLatihanHuruf, Utils.PARAM_LATIHAN_HURUF);
         textButtonClicked(textLatihanKata, Utils.PARAM_LATIHAN_KATA);
 
-        /** Ketika button Keluar diclick maka akan menghentikan aplikasi */
-        textKembali.setOnClickListener(
+        /** Ketika button Kembali diclick maka akan menutup activity saat ini dan menampilkan activity sebelumnya */
+        imageKembali.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

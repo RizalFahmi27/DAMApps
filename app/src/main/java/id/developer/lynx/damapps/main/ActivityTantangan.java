@@ -17,6 +17,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ public class ActivityTantangan extends AppCompatActivity {
 
     /** Variable untuk komponen yang ada di layout Tantangan */
     TextView textMulai, textHistory;
+    ImageView imageKembali;
 
     /** Variable dbHandler */
     SystemDBHandler dbHandler;
@@ -55,6 +57,7 @@ public class ActivityTantangan extends AppCompatActivity {
         /** Inisialisasi awal komponen di layout */
         textMulai = (TextView)findViewById(R.id.text_act_tantangan_start);
         textHistory = (TextView)findViewById(R.id.text_act_tantangan_history);
+        imageKembali = (ImageView)findViewById(R.id.image_act_tantangan_kembali);
 
         /**
          * Inisialisasi ketika tombol mulai diclick
@@ -94,6 +97,16 @@ public class ActivityTantangan extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         startActivity(new Intent(ActivityTantangan.this, ActivityHistoryTantangan.class));
+                    }
+                }
+        );
+
+        /** Ketika button Kembali diclick maka akan menutup activity saat ini dan menampilkan activity sebelumnya */
+        imageKembali.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onBackPressed();
                     }
                 }
         );

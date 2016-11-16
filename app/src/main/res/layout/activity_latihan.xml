@@ -20,62 +20,68 @@
         <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_vertical"
-        android:padding="20dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/text_act_latihan_angka"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPurpleLight"
-            android:padding="@dimen/act_main_padding_text"
-            android:layout_marginBottom="@dimen/act_main_margin_text"
-            android:text="Angka"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:textColor="@color/colorBlack"/>
+            android:layout_height="match_parent"
+            android:src="@drawable/bg"
+            android:scaleType="centerCrop"/>
 
-        <TextView
-            android:id="@+id/text_act_latihan_huruf"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorOrangeLight"
-            android:padding="@dimen/act_main_padding_text"
-            android:layout_marginBottom="@dimen/act_main_margin_text"
-            android:text="Huruf"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:textColor="@color/colorBlack"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:padding="20dp">
 
-        <TextView
-            android:id="@+id/text_act_latihan_kata"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorBlueSeaLight"
-            android:padding="@dimen/act_main_padding_text"
-            android:layout_marginBottom="@dimen/act_main_margin_text"
-            android:text="Kata"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:textColor="@color/colorBlack"/>
+            <TextView
+                android:id="@+id/text_act_latihan_angka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPurpleLight"
+                android:padding="@dimen/act_main_padding_text"
+                android:layout_marginBottom="@dimen/act_main_margin_text"
+                android:text="Angka"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"/>
 
-        <TextView
-            android:id="@+id/text_act_latihan_kembali"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorGrayLight"
-            android:padding="@dimen/act_main_padding_text"
-            android:text="Kembali"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:textColor="@color/colorBlack"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/text_act_latihan_huruf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorOrangeLight"
+                android:padding="@dimen/act_main_padding_text"
+                android:layout_marginBottom="@dimen/act_main_margin_text"
+                android:text="Huruf"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:id="@+id/text_act_latihan_kata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGreenLight"
+                android:padding="@dimen/act_main_padding_text"
+                android:layout_marginBottom="@dimen/act_main_margin_text"
+                android:text="Kata"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_act_latihan_kembali"
+            android:layout_width="@dimen/size_button_navigation_page"
+            android:layout_height="@dimen/size_button_navigation_page"
+            android:layout_margin="@dimen/margin_button_navigation_page"
+            android:src="@mipmap/ic_back"/>
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
