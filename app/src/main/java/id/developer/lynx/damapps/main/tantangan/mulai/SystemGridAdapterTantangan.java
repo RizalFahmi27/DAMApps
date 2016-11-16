@@ -53,11 +53,17 @@ public class SystemGridAdapterTantangan extends BaseAdapter {
         }
 
         if(typeTantangan.equalsIgnoreCase(Utils.TANTANGAN_TYPE_TEXT)){
-            ((TextView)convertView.findViewById(R.id.text_lay_grid_tantangan)).setText(list.get(position));
-            ((ImageView)convertView.findViewById(R.id.image_lay_grid_tantangan)).setVisibility(View.GONE);
+            ((TextView)convertView.findViewById(R.id.text_lay_grid_tantangan)).setVisibility(View.GONE);
+            ((ImageView)convertView.findViewById(R.id.image_lay_grid_tantangan)).setVisibility(View.VISIBLE);
+
+            int imageId = context.getResources().getIdentifier("drawable/"+list.get(position), "drawable", context.getPackageName());
+
+            ((ImageView)convertView.findViewById(R.id.image_lay_grid_tantangan)).setImageResource(imageId);
         }else{
-            ((TextView)convertView.findViewById(R.id.text_lay_grid_tantangan)).setText(list.get(position));
+            ((TextView)convertView.findViewById(R.id.text_lay_grid_tantangan)).setVisibility(View.VISIBLE);
             ((ImageView)convertView.findViewById(R.id.image_lay_grid_tantangan)).setVisibility(View.GONE);
+
+            ((TextView)convertView.findViewById(R.id.text_lay_grid_tantangan)).setText(list.get(position).toUpperCase());
         }
 
         return convertView;

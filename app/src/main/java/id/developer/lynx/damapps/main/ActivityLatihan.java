@@ -28,7 +28,7 @@ import id.developer.lynx.damapps.main.latihan.ActivityShowLatihan;
 
 public class ActivityLatihan extends AppCompatActivity {
 
-    /** Variable untuk komponen yang ada di layout Main */
+    /** Variable untuk komponen yang ada di layout Latihan */
     TextView textLatihanAngka, textLatihanHuruf, textLatihanKata, textKembali;
 
     @Override

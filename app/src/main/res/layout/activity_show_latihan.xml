@@ -34,4 +34,18 @@
             android:verticalSpacing="10dp"
             android:horizontalSpacing="10dp"/>
     </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_act_show_latihan_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/image_act_show_latihan_expanded_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

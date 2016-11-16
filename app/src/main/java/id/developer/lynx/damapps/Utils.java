@@ -1,7 +1,10 @@
 package id.developer.lynx.damapps;
 
 /**
- * Created by Bend on 11/8/2016.
+ * @author bend
+ * @version 1.0
+ * @date 11/6/2016
+ * Kelas untuk menyimpan semua variable global
  */
 
 public class Utils {
@@ -17,10 +20,10 @@ public class Utils {
     public static String PARAM_LATIHAN_KATA = "latihan_kata";
     public static String PARAM_LATIHAN_HURUF = "latihan_huruf";
 
-    public static String[] LIST_LATIHAN_ANGKA = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
-    public static String[] LIST_LATIHAN_HURUF = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
-                                                 "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
-                                                 "U", "V", "W", "X", "Y", "Z"};
+    public static String[] LIST_LATIHAN_ANGKA = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+    public static String[] LIST_LATIHAN_HURUF = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+                                                 "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
+                                                 "u", "v", "w", "x", "y", "z"};
 
     public static String TANTANGAN_TYPE_TEXT = "text";
     public static String TANTANGAN_TYPE_GAMBAR = "gambar";

@@ -8,15 +8,20 @@ package id.developer.lynx.damapps.main.latihan;
  */
 
 import android.content.Context;
+import android.media.Image;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
+import id.developer.lynx.damapps.ActivityMain;
 import id.developer.lynx.damapps.R;
+import id.developer.lynx.damapps.Utils;
 
 public class SystemGridAdapterLatihan extends BaseAdapter {
 
@@ -76,8 +81,14 @@ public class SystemGridAdapterLatihan extends BaseAdapter {
             convertView = LayoutInflater.from(context).inflate(R.layout.layout_grid_latihan, null);
         }
 
+        String text = list.get(position).getText();
+        int imageId = context.getResources().getIdentifier("drawable/"+list.get(position).getGambar(), "drawable", context.getPackageName());
+
+        Log.d(Utils.LOG_TAG, Utils.CATCH_ERROR+ list.get(position).getGambar());
+
         /** Set text sesuai dengan text pada list */
-        ((TextView)convertView.findViewById(R.id.text_lay_grid_latihan)).setText(list.get(position).getText());
+        ((TextView)convertView.findViewById(R.id.text_lay_grid_latihan)).setText(text.toUpperCase());
+        ((ImageView)convertView.findViewById(R.id.image_lay_grid_latihan)).setImageResource(imageId);
 
         return convertView;
     }

@@ -3,6 +3,7 @@ package id.developer.lynx.damapps.main.tantangan.mulai;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -54,7 +55,17 @@ public class ActivityShowTantangan extends AppCompatActivity {
         imageSoal = (ImageView)findViewById(R.id.image_act_show_tantangan_soal);
         textSoal = (TextView)findViewById(R.id.text_act_show_tantangan_soal);
 
-        textSoal.setText("Soal ke-" +(iniSoalKe+1));
+        if(listSoal.get(iniSoalKe).type.equalsIgnoreCase(Utils.TANTANGAN_TYPE_TEXT)){
+            textSoal.setText(listSoal.get(iniSoalKe).soal.toUpperCase());
+            imageSoal.setVisibility(View.GONE);
+        }else{
+            textSoal.setVisibility(View.GONE);
+
+            int imageId = getResources().getIdentifier("drawable/"+listSoal.get(iniSoalKe).soal, "drawable", getPackageName());
+            imageSoal.setImageResource(imageId);
+        }
+
+        Log.d(Utils.LOG_TAG, "This is type : " +listSoal.get(iniSoalKe).type);
 
         gridView = (GridView)findViewById(R.id.grid_act_show_tantangan);
         gridView.setAdapter(new SystemGridAdapterTantangan(this, getData(), listSoal.get(iniSoalKe).type));
